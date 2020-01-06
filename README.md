@@ -1,6 +1,6 @@
 # Anteckna
 
-> att anteckna: to note. (Swedish)
+> _att anteckna_: to note. (Swedish)
 
 GitHub repos are a nice enough place to dump `.md` notes, but they really don't showcase them that well. (Plus, they're missing a bunch of features, like _actual math support_). The aim of this project is to create a system that allows one to write a bunch of Markdown-format notes and get them in a form of a **repository of notes** (with customisable CSS and all!)
 
