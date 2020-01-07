@@ -17,6 +17,10 @@ The aim is to make this system as simple as possible; the process consists o
 
 Currently, the project is up to *step 3* (but very barely there).
 
+## Credits
+
+This project makes _heavy_ use of two fantastic packages: [Pandoc](https://pandoc.org) for converting between formats and [md-toc](https://pypi.org/project/md-toc/) for generating table of contents in Markdown.
+
 ## Prerequisites
 
 - Python 3 (of some sort)
