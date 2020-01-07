@@ -18,6 +18,7 @@ def cleanup(root, file):
     # Add a date, too.
     date = f"_Last updated {datetime.today().strftime('%d %B, %Y')}._\n"
 
+    # Write new .md to destination file.
     dest.writelines(title)
     dest.writelines("\n\n")
     dest.writelines(date)
@@ -43,7 +44,7 @@ def cleanup(root, file):
 Iterate through all files in the src folder and create clean versions.
 """
 def process():
-    for root, dirs, files in os.walk('src'):
+    for root, _, files in os.walk('src'):
         for file in files:
             if os.path.splitext(file)[1] == ".md":
                 cleanup(root, file)

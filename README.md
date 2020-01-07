@@ -17,6 +17,11 @@ The aim is to make this system as simple as possible; the process consists o
 
 Currently, the project is up to *step 3* (but very barely there).
 
+## Prerequisites
+
+- Python 3 (of some sort)
+- `pip install md-toc` for generating table of contents
+
 ## Usage
 
 (Only tested on Unix systems, sorry Windows users)
@@ -29,3 +34,7 @@ Currently, the project is up to *step 3* (but very barely there).
 ## Notes
 
 - You may notice that in the `css` folder, the CSS files are in `.txt` format and have `<style>` HTML tags wrapped around them. Why? For true portability when generating webpages; see [this fantastic blogpost](https://devilgate.org/blog/2012/07/02/tip-using-pandoc-to-create-truly-standalone-html-files/) for more information.
+
+## Things to fix/clean up
+
+LaTeX output is a bit weird (h1 should be title, not a `\section`).
