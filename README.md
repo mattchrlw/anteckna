@@ -10,7 +10,7 @@ GitHub repos are a nice enough place to dump `.md` notes, but they really don't 
 
 This project aims to be a middleground between full-strength LaTeX (which has its uses) and Markdown (which while incredibly simple, lacks flexibility for certain use-cases).
 
-The aim is to make this system as simple as possible; the process consists o
+The aim is to make this system as simple as possible; the process consists of
 1. Cleaning up Markdown and adding table of contents, dates and other useful info that would make the Markdown resemble a standard webpage;
 2. Passing the Markdown through `pandoc` to obtain PDF outputs of TeX files (for printing, assignments etc);
 3. Passing the cleaned up Markdown through `pandoc` to obtain a HTML webpage, with KaTeX support;
