@@ -21,7 +21,7 @@ Currently, the project is up to *step 3* (but very barely there).
 
 ## Credits
 
-This project makes _heavy_ use of two fantastic packages: [Pandoc](https://pandoc.org) for converting between formats and [md-toc](https://pypi.org/project/md-toc/) for generating table of contents in Markdown.
+This project makes _heavy_ use of two fantastic packages: [Pandoc](https://pandoc.org) for converting between formats and [md-toc](https://pypi.org/project/md-toc/) for generating table of contents in Markdown. I am also using [this CSS file](https://gist.github.com/killercup/5917178) for webpage output (but feel free to replace with your own!)
 
 ## Prerequisites
 
