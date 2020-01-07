@@ -1,5 +1,7 @@
 # Anteckna
 
+![Image depicting conversions between formats using Anteckna](https://github.com/mattchrlw/anteckna/raw/master/banner.png)
+
 ## Description
 
 > _att anteckna_: to note. (Swedish)
