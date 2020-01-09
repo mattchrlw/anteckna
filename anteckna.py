@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import md_toc
 import subprocess as sub
 import os
@@ -16,7 +18,7 @@ def cleanup(root, file):
     doc = source.readlines()
     toc = f"# Table of Contents\n\n{md_toc.build_toc(filename)}\n"
     # Add a date, too.
-    date = f"_Last updated {datetime.today().strftime('%d %B, %Y')}._\n"
+    date = f"_Last updated {datetime.fromtimestamp(os.path.getmtime(filename)).strftime('%B %d, %Y at %H:%M')}._\n"
 
     # Write new .md to destination file.
     dest.writelines(title)
@@ -30,15 +32,20 @@ def cleanup(root, file):
     source.close()
 
     # Create pdf file
-    sub.call(["pandoc", filename, "--toc", "-o", filename.replace("src/", "pdf/").replace(".md", ".pdf")])
+    sub.call(["pandoc", filename, "--toc", "-o", filename.replace("src/", "pdf/").replace(".md", ".pdf"), \
+                                "-V", "geometry:margin=2cm", \
+                                "-V", "fontsize=12pt", \
+                                "--shift-heading-level-by=-1", \
+                                "--metadata", f"date={date.replace('_', '')}"])
     # Create html file
     sub.call(["pandoc", filename.replace("src/", "dest/"),
-                                  "--quiet", \
-                                  "-s", \
-                                  "-H", "css/github-pandoc-css.txt", \
-                                  "--mathjax", \
-                                  "-T", title, \
-                                  "-o", filename.replace("src/", "web/").replace(".md", ".html")])
+                                "--quiet", \
+                                "-s", \
+                                "-H", "css/github-pandoc-css.txt", \
+                                "--mathjax", \
+                                "-T", title, \
+                                "-o", filename.replace("src/", "web/").replace(".md", ".html")])
+    print("Processing of", os.path.join(root, file), "completed.")
 
 """
 Iterate through all files in the src folder and create clean versions.

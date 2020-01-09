@@ -1,7 +1,7 @@
 # Markdown: Syntax
 
 
-_Last updated 07 January, 2020._
+_Last updated 08 January, 2020._
 
 # Table of Contents
 
@@ -18,27 +18,6 @@ _Last updated 07 January, 2020._
     - [Links](#links)
     - [Emphasis](#emphasis)
     - [Code](#code)
-
-
-*   [Overview](#overview)
-    *   [Philosophy](#philosophy)
-    *   [Inline HTML](#html)
-    *   [Automatic Escaping for Special Characters](#autoescape)
-*   [Block Elements](#block)
-    *   [Paragraphs and Line Breaks](#p)
-    *   [Headers](#header)
-    *   [Blockquotes](#blockquote)
-    *   [Lists](#list)
-    *   [Code Blocks](#precode)
-    *   [Horizontal Rules](#hr)
-*   [Span Elements](#span)
-    *   [Links](#link)
-    *   [Emphasis](#em)
-    *   [Code](#code)
-    *   [Images](#img)
-*   [Miscellaneous](#misc)
-    *   [Backslash Escapes](#backslash)
-    *   [Automatic Links](#autolink)
 
 
 **Note:** This document is itself written using Markdown; you
