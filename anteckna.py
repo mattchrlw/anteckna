@@ -16,7 +16,8 @@ def cleanup(root, file):
 
     title = source.readline()
     doc = source.readlines()
-    toc = f"# Table of Contents\n\n{md_toc.build_toc(filename)}\n"
+    # Skip the first line
+    toc = f"# Table of Contents\n\n{md_toc.build_toc(filename, skip_lines=1)}\n"
     # Add a date, too.
     date = f"_Last updated {datetime.fromtimestamp(os.path.getmtime(filename)).strftime('%B %d, %Y at %H:%M')}._\n"
 
@@ -41,7 +42,7 @@ def cleanup(root, file):
     sub.call(["pandoc", filename.replace("src/", "dest/"),
                                 "--quiet", \
                                 "-s", \
-                                "-H", "css/github-pandoc-css.txt", \
+                                "-H", "css/github-markdown-css.txt", \
                                 "--mathjax", \
                                 "-T", title, \
                                 "-o", filename.replace("src/", "web/").replace(".md", ".html")])
