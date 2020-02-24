@@ -3,6 +3,7 @@
 import md_toc
 import subprocess as sub
 import os
+import sys
 from datetime import datetime
 
 """
@@ -52,10 +53,17 @@ def cleanup(root, file):
 Iterate through all files in the src folder and create clean versions.
 """
 def process():
+    if len(sys.argv) > 1:
+        print(f"Selective update mode with string '{sys.argv[1]}'.")
+        selective = True
     for root, _, files in os.walk('src'):
         for file in files:
-            if os.path.splitext(file)[1] == ".md":
-                cleanup(root, file)
+            if selective:
+                if sys.argv[1] in file and os.path.splitext(file)[1] == ".md":
+                    cleanup(root, file)
+            else:
+                if os.path.splitext(file)[1] == ".md":
+                    cleanup(root, file)
 
 if __name__ == "__main__":
     process()
